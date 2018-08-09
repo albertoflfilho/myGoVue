@@ -9,20 +9,18 @@
 </head>
 <body>
 <div id="app">
-  <h1 v-once>{{ title }}</h1>
-  <p>{{ sayHeyVueJs() }} - <a v-bind:href="link">Google</a></p>
+  <button v-on:click="increase">Click me</button>
+  <p>{{ counter }}</p>
 </div>
 <script>
   new Vue({
     el: '#app',
     data: {
-      title: 'Hey Veu.js',
-      link: 'http://google.com'
+      counter: 0
     },
     methods: {
-      sayHeyVueJs: function() {
-        this.title = 'Hey';
-        return this.title;
+      increase: function() {
+        this.counter++
       }
     }
   });
