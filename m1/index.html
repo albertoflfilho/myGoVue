@@ -9,13 +9,14 @@
 </head>
 <body>
 <div id="app">
-  <p>{{ sayHeyVueJs() }}</p>
+  <p>{{ sayHeyVueJs() }} - <a v-bind:href="link">Google</a></p>
 </div>
 <script>
   new Vue({
     el: '#app',
     data: {
-      title: 'Hey Veu.js'
+      title: 'Hey Veu.js',
+      link: 'http://google.com'
     },
     methods: {
       sayHeyVueJs: function() {
